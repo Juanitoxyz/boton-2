@@ -1,0 +1,51 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.btn-modern {
+  position: relative;
+  font-weight: bold;
+  border: none;
+  padding: 6px 11px;
+  background-color: #93032E;
+  border-bottom: 1px solid #3b0113;
+  border-radius: 5px;
+  color: #C69F89;
+  transition: all 0.4s ease;
+}
+
+.tool {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  background-color: rgb(21, 20, 20);
+  border-radius: 2px;
+  padding: 5px;
+  color: #ccc;
+  width: 120px;
+  opacity: 0;
+}
+
+.tool::after {
+  content: "";
+  border: 10px solid transparent;
+  border-bottom-color: rgb(21, 20, 20);
+  position: absolute;
+  top: -19px;
+  left: 99px;
+}
+
+.btn-modern:hover {
+  cursor: pointer;
+  background-color: #C69F89;
+  color: #93032E;
+  box-shadow: 10px 10px 3px #544034;
+  transform: translateY(-5px);
+}
+
+.btn-modern:hover .tool {
+  opacity: 1;
+}
